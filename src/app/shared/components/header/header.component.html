@@ -1,0 +1,46 @@
+<div
+  class="header p-5"
+  [ngStyle]="{ 'background-color': currentBackgroundColor }"
+>
+  <div class="row pb-3 text-center">
+    <div class="col-md-4 col-sm-1">
+      <button type="button" class="btn btn-success" (click)="changeColor()">
+        Change Color
+      </button>
+    </div>
+    <div class="col-md-4 col-sm-1 my-2">
+      <img src="/assets/LOGO.png" class="rounded-circle" alt="logo" />
+    </div>
+    <div class="col-md-4 col-sm-1">
+      <i
+        class="bi bi-whatsapp me-2"
+        title="whatsapp"
+        (click)="goToSite('https://wa.me/59170731801')"
+      ></i>
+      <i
+        class="bi bi-facebook me-2"
+        [title]="tooltip"
+        (click)="goToSite('https://www.facebook.com/ammeneses')"
+      ></i>
+      <i
+        class="bi bi-instagram me-2"
+        title="instagram"
+        (click)="goToSite('https://www.instagram.com/adrimome/?hl=es-la')"
+      ></i>
+      <i
+        class="bi bi-youtube"
+        title="youtube"
+        (click)="goToSite('https://www.youtube.com/@MrGaryGranito')"
+      ></i>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div
+      class="col-md-1 col-sm-3 text-center menu-item"
+      *ngFor="let item of menuItems"
+    >
+      {{ item }}
+      <hr />
+    </div>
+  </div>
+</div>

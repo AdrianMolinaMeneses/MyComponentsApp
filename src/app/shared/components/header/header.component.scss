@@ -1,0 +1,60 @@
+.header {
+  //background-color: indianred;
+
+  img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+  }
+
+  i {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+  }
+
+  i:hover {
+    color: red;
+  }
+
+  .menu-item {
+    cursor: pointer;
+    color: white;
+
+    hr {
+      display: none;
+      //border: 2px solid blueviolet;
+      //margin: auto;
+    }
+  }
+
+  .menu-item:hover {
+    font-weight: bolder;
+    color: yellowgreen;
+
+    hr {
+      display: block;
+      border: 2px solid yellowgreen;
+      width: 50%;
+      margin: auto;
+      opacity: 1;
+      transition: 0.5s linear;
+    }
+  }
+}
+
+@media (min-width: 150px) and (max-width: 575px) {
+  .header {
+    .menu-item {
+      hr {
+        width: 20%;
+      }
+    }
+
+    .menu-item:hover {
+      hr {
+        width: 10%;
+      }
+    }
+  }
+}
